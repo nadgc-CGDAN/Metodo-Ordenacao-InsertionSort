@@ -1,18 +1,14 @@
 *********************Para 10^4**************************************
 
-1. Tamanho do array aleatorio: 10000, Tempo de execucao: 334.5513525009155 segundos
 
-31, 14, 23, 37, 11, 26, 16, 9, 47, 30, 33, 24
+1. Tamanho do array aleatorio: 10000, Tempo de execucao: 366.5334806442261 segundos
 
+2. Tamanho do array aleatorio: 10000, Tempo de execucao: 417.70059633255005 segundos
 
-2. Tamanho do array aleatorio: 10000, Tempo de execucao: 366.5334806442261 segundos
-
-3. Tamanho do array aleatorio: 10000, Tempo de execucao: 417.70059633255005 segundos
-
-4. Tamanho do array aleatorio: 10000, Tempo de execucao: 432.3728697299957 segundos
+3. Tamanho do array aleatorio: 10000, Tempo de execucao: 432.3728697299957 segundos
 
 ***********************Para 10^5***************************************************
-1. Tamanho do array aleatorio: 100000, Tempo de execu├º├úo: 14.811830997467041 segundos
+1. Tamanho do array aleatorio: 100000, Tempo de execucao: 14.811830997467041 segundos
 Array fornecido ordenado em ordem decrescente:
 [47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
 
@@ -28,18 +24,13 @@ Array fornecido ordenado em ordem decrescente:
 
 **********************Para 10^6****************************************************
 C:\Users\cd\Desktop\Projetos-AA-2024\Metódo-Ordenação>pypy 1000000-insertionsort.py
-Amostra do array de exemplo ordenado:
-[47, 47, 47, 47, 47, 47, 47, 47, 47, 47]
-Numero de comparacoes para o array de exemplo: 229166083331
-Numero de trocas para o array de exemplo: 229165083336
-Tamanho do array de exemplo: 999996, Tempo de execucao: 1268.533099 segundos
 
-1. Tamanho do array aleatorio: 1000000, Tempo de execucao: 1260.835221 segundos
 
-Amostra do array aleatorio ordenado em ordem decrescente:
-[47, 47, 47, 47, 47, 47, 47, 47, 47, 47]
+1.  Tamanho do array aleatorio: 1000000, Tempo de execucao: 1249.0389556884766 segundos
+Array fornecido ordenado em ordem decrescente:
+[47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
 
-2.  Tamanho do array aleatorio: 1000000, Tempo de execucao: 1249.0389556884766 segundos
+2. Tamanho do array aleatorio: 1000000, Tempo de execucao: 2501.098143339157 segundos
 Array fornecido ordenado em ordem decrescente:
 [47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
 
