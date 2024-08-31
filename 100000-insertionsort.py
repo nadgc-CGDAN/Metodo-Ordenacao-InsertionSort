@@ -39,7 +39,7 @@ def main():
 
     # Calcula e imprime o tempo de execução para o array aleatório
     execution_time_random = end_time_random - start_time_random
-    print(f"Tamanho do array aleatório: {size}, Tempo de execução: {execution_time_random} segundos")
+    print(f"Tamanho do array aleatorio: {size}, Tempo de execucao: {execution_time_random} segundos")
 
     # Ordena o array fornecido em ordem decrescente
     sorted_array_example, _, _ = insertion_sort(array.copy())
