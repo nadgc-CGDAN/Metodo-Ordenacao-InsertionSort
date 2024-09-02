@@ -20,7 +20,7 @@ def insertion_sort(array):
     return array, comparacoes, trocas
 
 def generate_large_array(size):
-    """Gera um array de tamanho 'size' com números aleatórios."""
+    """Gera um array de tamanho 'size' com numeros aleatorios."""
     return [random.randint(1, 1000000) for _ in range(size)]
 
 def main():
@@ -50,17 +50,17 @@ def main():
         print(sorted_array[:10], "...")  # Mostra apenas os primeiros 10 elementos para arrays grandes
 
         # Imprime o número de comparações e trocas realizadas
-        print("Número de comparações:", comparacoes)
-        print("Número de trocas:", trocas)
+        print("Numero de comparacoes:", comparacoes)
+        print("Numero de trocas:", trocas)
 
         # Análise assintótica
-        print("Análise assintótica:")
-        print("Número de comparações no pior caso: O(n^2)")
-        print("Número de trocas no pior caso: O(n^2)")
+        print("Analise assintotica:")
+        print("Numero de comparacoes no pior caso: O(n^2)")
+        print("Numero de trocas no pior caso: O(n^2)")
 
         # Calcula e imprime o tempo de execução
         execution_time = end_time - start_time
-        print("Tempo de execução:", execution_time, "segundos")
+        print("Tempo de execucao:", execution_time, "segundos")
 
 if __name__ == "__main__":
     main()

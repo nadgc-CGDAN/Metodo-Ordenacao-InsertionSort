@@ -56,6 +56,9 @@ Array fornecido ordenado em ordem decrescente:
 Array fornecido ordenado em ordem decrescente:
 [47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
 
+
+
+
 ********************************Para 10^7  heapsort*************************************************
 Array de exemplo ordenado em ordem decrescente:
 1. [47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
