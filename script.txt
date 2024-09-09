@@ -1,6 +1,4 @@
 *********************Para 10^4**************************************
-
-
 1. Tamanho do array aleatorio: 10000, Tempo de execucao: 366.5334806442261 segundos
 
 2. Tamanho do array aleatorio: 10000, Tempo de execucao: 417.70059633255005 segundos
@@ -33,17 +31,7 @@ Array fornecido ordenado em ordem decrescente:
 Array fornecido ordenado em ordem decrescente:
 [47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
 
-
-
-
-
-
-
-
 **********************Para 10^6****************************************************
-C:\Users\cd\Desktop\Projetos-AA-2024\Metódo-Ordenação>pypy 1000000-insertionsort.py
-
-
 1.  Tamanho do array aleatorio: 1000000, Tempo de execucao: 1249.0389556884766 segundos
 Array fornecido ordenado em ordem decrescente:
 [47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
@@ -55,9 +43,6 @@ Array fornecido ordenado em ordem decrescente:
 3. Tamanho do array aleatorio: 1000000, Tempo de execucao: 1070.461433649063 segundos
 Array fornecido ordenado em ordem decrescente:
 [47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
-
-
-
 
 ********************************Para 10^7  heapsort*************************************************
 Array de exemplo ordenado em ordem decrescente:
@@ -74,14 +59,12 @@ Numero de trocas para o array de exemplo: 34
 Tempo de execucao para o array de exemplo: 0.000000 segundos
 Tamanho do array grande: 10000000, Tempo de execucao: 30.441215 segundos
 
-
 3. Array de exemplo ordenado em ordem decrescente:
 [47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
 Numero de comparacoes para o array de exemplo: 30
 Numero de trocas para o array de exemplo: 34
 Tempo de execucao para o array de exemplo: 0.000000 segundos
 Tamanho do array grande: 10000000, Tempo de execucao: 28.653027 segundos
-
 
 4. Array de exemplo ordenado em ordem decrescente:
 [47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
@@ -90,7 +73,6 @@ Numero de trocas para o array de exemplo: 34
 Tempo de execucao para o array de exemplo: 0.000000 segundos
 Tamanho do array grande: 10000000, Tempo de execucao: 24.628355 segundos
 
-
 5. Array de exemplo ordenado em ordem decrescente:
 [47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
 Numero de comparacoes para o array de exemplo: 30
@@ -98,102 +80,7 @@ Numero de trocas para o array de exemplo: 34
 Tempo de execucao para o array de exemplo: 0.000000 segundos
 Tamanho do array grande: 10000000, Tempo de execucao: 31.232731 segundos
 
-
-
-
-
-
-
-
-
-
-
-
-
-import time
-import random
-
-def insertion_sort(array):
-    """Ordena um array usando o algoritmo Insertion Sort."""
-    n = len(array)
-    comparacoes = 0  # Contador para comparações
-    trocas = 0       # Contador para trocas
-    for i in range(1, n):
-        chave = array[i]
-        j = i - 1
-        # Move os elementos do array que são maiores que a chave para uma posição à frente
-        while j >= 0 and array[j] < chave:
-            comparacoes += 1  # Incrementa o contador de comparações
-            array[j + 1] = array[j]
-            trocas += 1       # Incrementa o contador de trocas
-            j -= 1
-        comparacoes += 1  # Conta a última comparação onde array[j] <= chave
-        array[j + 1] = chave
-    return array, comparacoes, trocas
-
-def main():
-    """Função principal que executa o programa."""
-    size = 10**7  # Tamanho do array aleatório
-
-    # Array de exemplo com os mesmos valores
-    array = [31, 14, 23, 37, 11, 26, 16, 9, 47, 30, 33, 24] * (size // 12)
-    
-    # Gera um array aleatório de tamanho 10^7 com os mesmos valores do array de exemplo
-    array_random = array[:]
-
-    # Inicia a contagem de tempo para o array de exemplo
-    start_time_example = time.time()
-
-    # Ordena o array de exemplo em ordem decrescente usando o insertion sort
-    sorted_array_example, comparacoes_example, trocas_example = insertion_sort(array.copy())
-
-    # Finaliza a contagem de tempo para o array de exemplo
-    end_time_example = time.time()
-
-    # Imprime uma amostra do array de exemplo ordenado
-    print("Amostra do array de exemplo ordenado:")
-    print(sorted_array_example[:10])
-
-    # Imprime o número de comparações e trocas realizadas para o array de exemplo
-    print("Numero de comparações para o array de exemplo:", comparacoes_example)
-    print("Numero de trocas para o array de exemplo:", trocas_example)
-
-    # Calcula e imprime o tempo de execução para o array de exemplo
-    execution_time_example = end_time_example - start_time_example
-    print(f"Tamanho do array de exemplo: {len(array)}, Tempo de execucao: {execution_time_example:.6f} segundos")
-
-    # Inicia a contagem de tempo para o array aleatório
-    start_time_random = time.time()
-
-    # Ordena o array aleatório em ordem decrescente usando o insertion sort
-    sorted_array_random, comparacoes_random, trocas_random = insertion_sort(array_random.copy())
-
-    # Finaliza a contagem de tempo para o array aleatório
-    end_time_random = time.time()
-
-    # Calcula e imprime o tempo de execução para o array aleatório
-    execution_time_random = end_time_random - start_time_random
-    print(f"Tamanho do array aleatorio: {size}, Tempo de execucao: {execution_time_random:.6f} segundos")
-
-    # Imprime uma amostra do array aleatório ordenado em ordem decrescente
-    print("Amostra do array aleatorio ordenado em ordem decrescente:")
-    print(sorted_array_random[:10])
-
-if __name__ == "__main__":
-    main()
-
-
-
-
-
-
-
-
-
-
-
 *******************************************Para 10^8********************************************
-
 1. Array de exemplo ordenado em ordem decrescente:
 [47, 37, 33, 31, 30, 26, 24, 23, 16, 14, 11, 9]
 Tempo de execucao para o array de exemplo: 0.000000 segundos
